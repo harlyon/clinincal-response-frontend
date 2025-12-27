@@ -2,7 +2,7 @@
 
 A modern, responsive web application for predicting patient responses to clinical treatments with real-time analysis and visualization.
 
-![Dashboard Preview](public/screenshot.png)
+![Dashboard Preview](https://clinincal-response-frontend.vercel.app/)
 
 ## Features
 
