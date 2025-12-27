@@ -10,7 +10,6 @@ export const UserProfile = ({
   name,
   role,
   institution,
-  onLogout,
 }: UserProfileProps) => (
   <div className="flex items-center space-x-3 pl-3 border-l border-slate-200">
     <div className="w-9 h-9 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center text-white font-medium">

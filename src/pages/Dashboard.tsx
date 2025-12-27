@@ -17,7 +17,6 @@ import type {
 } from "../types/types";
 import BatchUpload from "../components/BatchUpload";
 import { useAuth } from "../hooks/useAuth";
-import { ApiStatus } from "../components/ApiStatus";
 
 function Dashboard() {
 const {logout } = useAuth();

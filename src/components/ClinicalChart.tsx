@@ -7,7 +7,6 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ReferenceArea,
 } from "recharts";
 
 interface ChartProps {
