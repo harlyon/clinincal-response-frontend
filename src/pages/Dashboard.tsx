@@ -1,22 +1,23 @@
-import { useEffect, useState } from "react";
 import {
   AlertTriangle,
-  CheckCircle,
-  Calculator,
   BarChart3,
+  Calculator,
+  CheckCircle,
 } from "lucide-react";
-import { predictResponse } from "../utils/api";
-import { ClinicalChart } from "../components/ClinicalChart";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ApiStatus } from "../components/ApiStatus.tsx";
+import BatchUpload from "../components/BatchUpload";
+import { ClinicalChart } from "../components/ClinicalChart";
 import SideBar from "../components/SideBar";
 import TopNavigation from "../components/TopNavigation";
+import { useAuth } from "../hooks/useAuth";
 import type {
   PatientData,
   PredictionResponse,
   User,
 } from "../types/types";
-import BatchUpload from "../components/BatchUpload";
-import { useAuth } from "../hooks/useAuth";
+import { predictResponse } from "../utils/api";
 
 function Dashboard() {
 const {logout } = useAuth();
@@ -97,8 +98,6 @@ const {logout } = useAuth();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 font-sans text-slate-900 flex">
-           
-
       <SideBar mode={mode} setMode={setMode} />
       <div className="flex-1 flex flex-col overflow-hidden lg:ml-0">
         <TopNavigation
@@ -106,6 +105,7 @@ const {logout } = useAuth();
           handleLogout={logout}
           mode={mode}
         />
+
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           {mode === "single" ? (
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -308,6 +308,7 @@ const {logout } = useAuth();
           )}
         </main>
       </div>
+      <ApiStatus />
     </div>
   );
 }

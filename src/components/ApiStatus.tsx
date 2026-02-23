@@ -29,7 +29,7 @@ export const ApiStatus = () => {
   return (
     <div className="fixed bottom-4 right-4 px-4 py-2 rounded-lg shadow-md flex items-center gap-2">
       <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-      <span className="text-xs text-slate-300">
+      <span className="text-xs text-black-300">
         System Operational -&gt; API Ready
       </span>
     </div>

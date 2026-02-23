@@ -1,5 +1,5 @@
+import { AlertTriangle, CheckCircle, FileText, Upload } from "lucide-react";
 import React, { useState } from "react";
-import { FileText, Upload, CheckCircle, AlertTriangle } from "lucide-react";
 import type { BatchResult } from "../types/types";
 import { uploadBatchCsv } from "../utils/api";
 
@@ -69,7 +69,7 @@ const BatchUpload: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-6 sm:p-8">
+        <div className="p-6 sm:p-8 mb-5">
           <div className="border-3 border-dashed border-slate-300/80 rounded-2xl p-8 sm:p-12 text-center bg-gradient-to-b from-slate-50/50 to-white">
             <div className="inline-flex p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl mb-6">
               <Upload className="w-12 h-12 text-blue-600" />
